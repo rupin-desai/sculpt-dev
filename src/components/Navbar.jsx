@@ -14,7 +14,7 @@ const Navbar = () => {
             <Link to="/projects">Projects</Link>
           </li>
           <li className="hover:text-gray-600 cursor-pointer">
-            <Link to="/contact"><Contacts></Contacts></Link>
+            <Link to="/contact">Contact</Link>
           </li>
         </ul>
         <button className="md:hidden p-2 bg-gray-200 rounded">Menu</button>
