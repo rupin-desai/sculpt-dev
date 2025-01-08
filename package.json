@@ -1,7 +1,6 @@
 {
   "name": "archi-dev",
   "homepage": "https://rupin-desai.github.io/sculpt-dev/",
-  "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
