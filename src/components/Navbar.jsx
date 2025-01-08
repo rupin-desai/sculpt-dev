@@ -8,13 +8,13 @@ const Navbar = () => {
         <div className="text-2xl font-bold text-gray-900">ArchDesign</div>
         <ul className="hidden md:flex space-x-8">
           <li className="hover:text-gray-600 cursor-pointer">
-            <Link to="/">Home</Link>
+            <Link to="/sculpt-dev/">Home</Link>
           </li>
           <li className="hover:text-gray-600 cursor-pointer">
-            <Link to="/projects">Projects</Link>
+            <Link to="/sculpt-dev/projects">Projects</Link>
           </li>
           <li className="hover:text-gray-600 cursor-pointer">
-            <Link to="/contact">Contact</Link>
+            <Link to="/sculpt-dev/contact">Contact</Link>
           </li>
         </ul>
         <button className="md:hidden p-2 bg-gray-200 rounded">Menu</button>
