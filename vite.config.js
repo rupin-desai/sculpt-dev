@@ -7,6 +7,5 @@ export default defineConfig({
 
   server:{
     base:'/sculpt-dev',
-    port:4000,
   }
 })
