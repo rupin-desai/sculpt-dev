@@ -12,10 +12,10 @@ import ProjectsPage from "./pages/ProjectsPage";
 import ContactPage from "./pages/ContactPage";
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path='/' element={<MainLayout/>}> 
+    <Route path='/sculpt-dev' element={<MainLayout/>}> 
       <Route index element={<HomePage />} />
-      <Route path='/projects' element={<ProjectsPage />} />
-      <Route path='/contact' element={<ContactPage />} />
+      <Route path='/sculpt-dev/projects' element={<ProjectsPage />} />
+      <Route path='/sculpt-dev/contact' element={<ContactPage />} />
 
     </Route>
 
