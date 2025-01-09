@@ -3,6 +3,13 @@ export default {
   darkMode: ["class"],
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    screens: {
+      sm: '480px', // Change the default `sm` breakpoint
+      md: '768px', // Default `md` breakpoint
+      lg: '1024px', // Default `lg` breakpoint
+      xl: '1280px', // Default `xl` breakpoint
+      '2xl': '1536px', // Default `2xl` breakpoint
+    },
     extend: {
       fontFamily: {
         kumbh: ["Kumbh Sans", "sans-serif"],
