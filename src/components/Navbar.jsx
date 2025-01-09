@@ -4,8 +4,8 @@ import logo from '../assets/logo.png';
 
 const Navbar = () => {
   return (
-    <header className="bg-white p-7 w-full z-10 font-kumbh">
-      <nav className="container mx-auto flex justify-between items-center py-4 px-6">
+    <header className="bg-white p-0 w-full z-10 font-kumbh">
+      <nav className="container mx-auto flex justify-between items-center py-6 px-6">
         {/* Logo */}
         <div className="flex">
           <img

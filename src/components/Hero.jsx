@@ -4,6 +4,7 @@ import hero from "../assets/hero.png";
 import HeroStats from "./HeroStats";
 import HeroTitle from "./HeroTitle";
 
+
 const Hero = () => {
   return (
     <section className="bg-white h-screen flex items-center justify-between relative flex-row ">
