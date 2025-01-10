@@ -20,6 +20,7 @@ export default {
       },
       maxHeight: {
         '600': '600px',
+        '550': '550px',
       },
       borderRadius: {
         lg: "var(--radius)",
