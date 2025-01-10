@@ -2,20 +2,15 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const ProjectsImages = ({ images }) => {
-  const imageClasses = `w-full object-cover max-h-[480px] transition-transform duration-300 
+  const imageClasses = `w-full object-cover transition-transform duration-300 
     hover:scale-110 group-hover:hover:scale-110 hover:shadow-2xl group-hover:shadow-none rounded-md 
     group-hover:z-10 transition-all duration-300 ease-in-out`;
 
-  const columnsClass = `columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 group`;
+  const columnsClass = `columns-1 sm:columns-2 md:columns-3 lg:columns-4 xl:columns-4 gap-4 group`;
 
   return (
-    <div
-      className="mt-10 overflow-hidden max-h-full p-10 lg:max-h-600 lg:p-0"
-     
-    >
-      <div
-        className={`${columnsClass} md:max-h-full sm:max-h-full max-h-full `}
-      >
+    <div className="mt-10 px-10 sm:px-6 md:px-12 lg:px-20" >
+      <div className={columnsClass}>
         {images.map((src, index) => (
           <motion.div
             key={index}
