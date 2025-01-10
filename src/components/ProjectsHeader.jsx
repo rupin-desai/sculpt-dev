@@ -1,12 +1,12 @@
-import React from 'react'
+import React from "react";
+import { motion } from "framer-motion";
 
-import { motion } from 'framer-motion'
-const ProjectsHeader = ({headerText}) => {
+const ProjectsHeader = ({ headerText }) => {
   return (
-    <section className="flex justify-start bg-white pt-16 pb-5 pl-48 pr-20">
+    <section className="flex flex-col sm:flex-row justify-center sm:justify-start bg-white pt-16 pb-5 px-6 sm:px-8 md:px-12 lg:px-20">
       
       <motion.div
-        className="flex p-0 text-2xl text-gray-custom"
+        className="flex p-0 text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-gray-custom text-center sm:text-left leading-snug"
         initial={{ x: "100%", opacity: 0 }} // Start from the right with 0 opacity
         whileInView={{ x: 0, opacity: 1 }} // Slide to the center and fade in
         transition={{ duration: 1 }}
@@ -15,7 +15,7 @@ const ProjectsHeader = ({headerText}) => {
         {headerText}
       </motion.div>
 
-      <div className="flex justify-center text-center align-middle px-10 my-auto">
+      <div className="flex justify-center sm:justify-start text-center sm:text-left align-middle px-5 sm:px-8 mt-5 w-full md:w-auto">
         <motion.hr
           className="flex border-t-4 border-green-900 rounded-l-full rounded-r-full"
           initial={{ width: 0 }}
@@ -25,7 +25,7 @@ const ProjectsHeader = ({headerText}) => {
         />
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default ProjectsHeader
+export default ProjectsHeader;
