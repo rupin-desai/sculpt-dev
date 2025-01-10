@@ -11,12 +11,20 @@
     font-weight: normal;
     font-style: normal;
   }
+
+
   
   @font-face {
     font-family: 'Redex Pro';
     src: url('/public/assets/fonts/ReadexPro-Bold.ttf') format('truetype');
-    font-weight: 300;
+    font-weight: bold;
     font-style: normal;
+  }
+  @font-face {
+    font-family: 'Redex Pro';
+    src: url('/public/assets/fonts/ReadexPro-Light.ttf') format('truetype');
+    font-weight: 100; /* Thin weight */
+    font-style: thin;
   }
 
   :root {
