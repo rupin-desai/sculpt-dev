@@ -18,6 +18,9 @@ export default {
         "extra-loose": "2",
         12: "3rem",
       },
+      maxHeight: {
+        '600': '600px',
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
