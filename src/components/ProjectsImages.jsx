@@ -1,31 +1,15 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const ProjectsImages = ({
-  images,
-  smColumns = 2,
-  mdColumns = 3,
-  lgColumns = 4,
-  xlColumns = 5,
-  maxHeight = "600px", // default max-height for the container
-  overflow = "hidden", // default overflow for the container
-  imageMaxHeight = "480px", // default max-height for the images
-}) => {
-  const imageClasses = `w-full object-cover max-h-[${imageMaxHeight}] transition-transform duration-300 
+const ProjectsImages = ({ images }) => {
+  const imageClasses = `w-full object-cover max-h-[480px] transition-transform duration-300 
     hover:scale-110 group-hover:hover:scale-110 hover:shadow-2xl group-hover:shadow-none rounded-md 
     group-hover:z-10 transition-all duration-300 ease-in-out`;
 
-  // Dynamically generate the columns classes based on the breakpoints props
-  const columnsClass = `columns-1 sm:columns-${smColumns} md:columns-${mdColumns} lg:columns-${lgColumns} xl:columns-${xlColumns} gap-4 group`;
+  const columnsClass = `columns-1 sm:columns-2 md:columns-3 lg:columns-4 xl:columns-4 gap-4 group`;
 
   return (
-    <div
-      className={`mt-10`}
-      style={{
-        maxHeight: maxHeight,
-        overflow: overflow,
-      }}
-    >
+    <div className="mt-10" style={{ maxHeight: "600px", overflow: "hidden" }}>
       <div className={columnsClass}>
         {images.map((src, index) => (
           <motion.div

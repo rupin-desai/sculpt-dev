@@ -13,34 +13,16 @@ const projectProps = {
     "/sculpt-dev/projects-5.png",
     "/sculpt-dev/projects-6.png",
   ],
-  smColumns: 2,
-  mdColumns: 2,
-  lgColumns: 2,
-  xlColumns: 2,
-  maxHeight: "fit", // Max height for the container
-  overflow: "auto", // Overflow behavior
-  imageMaxHeight: "fit", // Max height for each image
 };
 
 const ProjectsPage = () => {
   return (
-    <>
     <div className="px-40 pb-16">
-    <Projects
-      headerText={projectProps.headerText}
-      images={projectProps.images}
-      smColumns={projectProps.smColumns}
-      mdColumns={projectProps.mdColumns}
-      lgColumns={projectProps.lgColumns}
-      xlColumns={projectProps.xlColumns}
-      maxHeight={projectProps.maxHeight}
-      overflow={projectProps.overflow}
-      imageMaxHeight={projectProps.imageMaxHeight}
-    />
+      <Projects
+        headerText={projectProps.headerText}
+        images={projectProps.images}
+      />
     </div>
-    
-    </>
-    
   );
 };
 
