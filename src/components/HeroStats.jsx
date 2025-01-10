@@ -1,11 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const statClasses = "w-full md:w-1/4 text-sm sm:text-sm md:text-xl lg:text-2xl font-bold";
-const statSubClasses = "text-xs sm:text-sm md:text-xl lg:text-2xl font-light"
+const statClasses = "flex justify-left text-left flex-col w-full md:w-1/4 text-xs sm:text-sm md:text-xl lg:text-2xl  font-bold";
+const statSubClasses = "text-xs sm:text-sm md:text-md lg:text-lg font-light text-gray-500"
 const HeroStats = ({ clients, projectsCompleted, awardsWon, ideaText }) => {
   return (
-    <div className="absolute bottom-0 left-0 right-0 bg-white text-bl text-lg py-5 lg:py-10 sm:w-[calc(100%-20vw)] transform ">
+    <div className="absolute bottom-0 left-0 right-0 bg-white text-bl text-lg py-5 lg:py-6 sm:w-[calc(100%-15vw)] transform ">
       <motion.div
         className="flex  justify-between text-center px-4 md:px-20"
         initial={{ y: "100%", opacity: 0 }}  // Starts from below
@@ -51,14 +51,14 @@ const HeroStats = ({ clients, projectsCompleted, awardsWon, ideaText }) => {
 
         {/* Idea Section */}
         <motion.div
-          className="flex justify-left text-left flex-col w-full md:w-1/4 text-xs sm:text-sm md:text-xl lg:text-2xl  font-bold"
+          className={statClasses}
           initial={{ y: "100%", opacity: 0 }}  // Starts from below
           whileInView={{ y: 0, opacity: 1 }}  // Moves up to its normal position
           transition={{ duration: 0.3, delay: 0.5 }}  // Delay of 0.8s for the fourth item
           viewport={{ once: true }} 
         >
           Got an idea?
-          <p className="flex  ml-1 justify-left text-left text-xs sm:text-sm md:text-xl lg:text-2xl font-bold text-green-900 underline underline-offset-2 decoration-thick-2">
+          <p className="flex  justify-left text-left text-xs sm:text-sm md:text-xl lg:text-lg font-bold text-green-900 underline underline-offset-2 decoration-thick-2">
             {ideaText}
           </p>
         </motion.div>

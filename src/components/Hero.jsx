@@ -16,7 +16,7 @@ const Hero = () => {
       }}
     >
       {/* Left Section */}
-      <div className="w-full md:w-7/12 text-center md:text-left pl-6 md:pl-32 flex flex-col justify-between h-full">
+      <div className="w-full  md:w-7/12 text-center md:text-left pl-2 md:pl-16 flex flex-col justify-between h-full">
         <HeroTitle
           title="Architectural Solutions for Every Vision"
           subtitle="Explore the symbiotic relationship between architecture and the environment"
@@ -27,7 +27,7 @@ const Hero = () => {
           clients={14}
           projectsCompleted={21}
           awardsWon={6}
-          ideaText="Make it!"
+          ideaText="Let's Make it!"
         />
       </div>
   

@@ -1,30 +1,20 @@
-import React from 'react'
+import React from "react";
 
+const headerText =
+  "Sculpt Designs is a dynamic architectural and design firm based in India, founded by Ar. Chinmay Rajeshirke, an architect with a global perspective. Our expertise spans architecture, interior design, and landscape architecture, allowing us to offer comprehensive solutions for residential and commercial projects.";
 const About = () => {
   return (
-    <section className="bg-gray-200 py-16 px-6">
-    <div className="container mx-auto flex flex-col md:flex-row items-center">
-      <div className="md:w-1/2 md:pr-10">
-        <h2 className="text-4xl font-bold text-gray-800 mb-6">About Us</h2>
-        <p className="text-lg text-gray-600 mb-4">
-          ArchDesign is a premier architecture firm dedicated to creating
-          innovative and sustainable spaces tailored to your needs.
-        </p>
-        <p className="text-lg text-gray-600">
-          Our team of skilled architects and designers are passionate about
-          bringing your vision to life.
-        </p>
-      </div>
-      <div className="md:w-1/2">
-        <img
-          src="https://via.placeholder.com/500x300"
-          alt="About Us"
-          className="rounded-lg shadow-md"
-        />
-      </div>
+    <section className="flex justify-end  bg-white py-16 pl-48 pr-20">
+    <div className="flex justify-center text-center align-middle px-10 my-auto">
+    <hr className="flex border-t-4 border-green-900 w-60 rounded-l-full rounded-r-full" />
+
+    </div>
+    <div className="flex p-0 text-lg  text-gray-custom"> 
+    {headerText}
+      
     </div>
   </section>
-  )
-}
+  );
+};
 
-export default About
+export default About;

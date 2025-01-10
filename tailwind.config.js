@@ -4,15 +4,19 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     screens: {
-      sm: '480px', // Change the default `sm` breakpoint
-      md: '768px', // Default `md` breakpoint
-      lg: '1024px', // Default `lg` breakpoint
-      xl: '1280px', // Default `xl` breakpoint
-      '2xl': '1536px', // Default `2xl` breakpoint
+      sm: "480px", // Change the default `sm` breakpoint
+      md: "768px", // Default `md` breakpoint
+      lg: "1024px", // Default `lg` breakpoint
+      xl: "1280px", // Default `xl` breakpoint
+      "2xl": "1536px", // Default `2xl` breakpoint
     },
     extend: {
       fontFamily: {
-        kumbh: ["Kumbh Sans", "sans-serif"],
+        sans: ["Redex Pro", "sans-serif"],
+      },
+      lineHeight: {
+        "extra-loose": "2",
+        12: "3rem",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -26,6 +30,13 @@ export default {
       },
       colors: {
         "gray-custom": "#5A5A5A",
+        "off-gray": "#444444",
+        green: {
+          900: "#1C554C", // Replace with your custom color code
+        },
+
+        black: "#1a1a1a",
+
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
