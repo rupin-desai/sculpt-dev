@@ -2,26 +2,26 @@ import React from "react";
 import hero from "../assets/hero.png";
 import HeroStats from "./HeroStats";
 import HeroTitle from "./HeroTitle";
-import HeroBg from "../assets/hero-bg.png"
+import HeroBg from "../assets/hero-bg.png";
 
 const Hero = () => {
   return (
     <section
-      className="bg-white h-screen flex items-center justify-between relative flex-row"
+      className="bg-white h-screen flex items-center justify-center relative flex-col sm:flex-row"
       style={{
-        backgroundImage: `url(${HeroBg})`, // Add your vector image path here
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
+        backgroundImage: `url(${HeroBg})`,
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
       }}
     >
       {/* Left Section */}
-      <div className="w-full  md:w-7/12 text-center md:text-left pl-2 md:pl-16 flex flex-col justify-between h-full">
+      <div className="w-full sm:w-7/12 text-center sm:text-left px-4 sm:px-16 flex flex-col justify-center h-full">
         <HeroTitle
           title="Architectural Solutions for Every Vision"
           subtitle="Explore the symbiotic relationship between architecture and the environment"
         />
-  
+
         {/* Bottom Text with Overlap */}
         <HeroStats
           clients={14}
@@ -30,13 +30,13 @@ const Hero = () => {
           ideaText="Let's Make it!"
         />
       </div>
-  
+
       {/* Right Section - Image */}
-      <div className="w-full md:w-5/12 h-full bg-cover bg-center flex justify-center md:justify-start">
+      <div className="w-full sm:w-5/12 h-full bg-cover bg-center flex justify-center sm:justify-start mt-8 sm:mt-0">
         <img
           src={hero}
           alt="ArchDesign Logo"
-          className="h-full w-full object-cover md:w-auto"
+          className="h-full w-full object-cover sm:w-auto sm:max-w-full"
         />
       </div>
     </section>
