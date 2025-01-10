@@ -18,16 +18,16 @@ const Navbar = () => {
         {/* Navigation Links */}
         <ul className="flex text-base font-medium space-x-8 text-gray-custom mr-[14%]" >
           <li className="hover:text-gray-600 transition">
-            <Link to="/">Home</Link>
+            <Link to="/sculpt-dev">Home</Link>
           </li>
           <li className="hover:text-gray-600 transition">
-            <Link to="/about">About</Link>
+            <Link to="/sculpt-dev/about">About</Link>
           </li>
           <li className="hover:text-gray-600 transition">
-            <Link to="/projects">Projects</Link>
+            <Link to="/sculpt-dev/projects">Projects</Link>
           </li>
           <li className="hover:text-gray-600 transition">
-            <Link to="/contact">Contact</Link>
+            <Link to="/sculpt-dev/contact">Contact</Link>
           </li>
         </ul>
       </nav>
