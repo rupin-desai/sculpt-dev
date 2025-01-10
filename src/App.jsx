@@ -18,9 +18,12 @@ const router = createBrowserRouter(
       <Route path='/sculpt-dev/projects' element={<ProjectsPage />} />
       <Route path='/sculpt-dev/contact' element={<ContactPage />} />
     </Route>
-
-)
+  ),
+  {
+    basename: '/sculpt-dev',
+  }
 );
+
 
 const App = () => {
   return <RouterProvider router={router} />;
