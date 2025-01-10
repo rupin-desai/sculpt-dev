@@ -4,9 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Page Not Found</title>
-    <meta http-equiv="refresh" content="0; url=/sculpt-dev/" />
+    <meta http-equiv="refresh" content="0; url=" id="redirect-meta" />
     <script type="text/javascript">
-      window.location.href = "/sculpt-dev/"; // Redirect to the homepage on 404
+      // Get the referrer URL and redirect back to the page from where it was called
+      const referrer = document.referrer || "/sculpt-dev/";  // Default to home if no referrer is available
+      document.getElementById("redirect-meta").content = `0; url=${referrer}`;
+      window.location.href = referrer; // Redirect using JavaScript as a fallback
     </script>
   </head>
   <body>
