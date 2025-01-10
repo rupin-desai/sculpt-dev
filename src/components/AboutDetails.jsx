@@ -7,65 +7,70 @@ import AboutDetailsCard from "./AboutDetailsCard";
 
 const AboutDetails = ({ AboutText }) => {
   return (
-    <section className="flex flex-row bg-white py-0 justify-center text-black">
+    <section className="flex flex-col lg:flex-row bg-white py-8 justify-center text-black">
+      {/* Left Image Section */}
       <motion.div
-        className="flex w-1/2 justify-center text-center pr-20"
-        initial={{ y: "50%" }} // Start from 50% below the viewport (adjust as needed)
-        whileInView={{ y: 0 }} // Move to its normal position
-        transition={{ duration: 1 }} // Animation duration
+        className="flex w-full lg:w-1/2 justify-center lg:justify-end text-center px-6 lg:pr-20 mb-8 lg:mb-0"
+        initial={{ y: "50%" }}
+        whileInView={{ y: 0 }}
+        transition={{ duration: 1 }}
         viewport={{
-          amount: 0.25, // Trigger when 25% of the element is in the viewport
-          once: true, // Ensure it animates only once
+          amount: 0.25,
+          once: true,
         }}
       >
-        <img src={AboutLeft} alt="About Left" />
+        <img src={AboutLeft} alt="About Left" className="w-full max-w-sm lg:max-w-md" />
       </motion.div>
 
-      <div className="flex flex-col w-2/5 text-left my-auto pr-14 text-black">
+      {/* Text and Details Section */}
+      <div className="flex flex-col w-full lg:w-2/5 text-left px-6 lg:px-14 my-auto">
+        {/* Title */}
         <motion.div
-          className="flex text-2xl py-2"
-          initial={{ x: "100%", opacity: 0 }} // Start off-screen to the left with zero opacity
-          whileInView={{ x: 0, opacity: 1 }} // Slide to its normal position and fade in
-          transition={{ duration: 1 }} // Animation duration
-          viewport={{ once: true }} // Ensure the animation happens only once when the element comes into view
+          className="text-2xl font-bold py-2"
+          initial={{ x: "100%", opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
         >
           About Us
         </motion.div>
 
+        {/* Description */}
         <motion.div
-          className="flex text-sm pb-5"
-          initial={{ x: "100%", opacity: 0 }} // Start off-screen to the left with zero opacity
-          whileInView={{ x: 0, opacity: 1 }} // Slide to its normal position and fade in
-          transition={{ duration: 1,delay: 0.2 }} // Animation duration
-          viewport={{ once: true }} // Ensure the animation happens only once when the element comes into view
+          className="text-sm text-gray-700 pb-5 leading-relaxed"
+          initial={{ x: "100%", opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1, delay: 0.2 }}
+          viewport={{ once: true }}
         >
           {AboutText}
         </motion.div>
-        <motion.div
-          className="flex flex-col w-11/12 bg-green-900 rounded-md p-2 py-5 pr-10 mr-auto"
-          style={{
-            backgroundImage: `url(${AboutDetailsCardBG})`, // path to your image
-            backgroundPosition: "bottom right", // position at the bottom right corner
-            backgroundSize: "50%", // adjust size as needed, 'contain' fits the image within the div
-            backgroundRepeat: "no-repeat", // ensures the image doesn't repeat
-          }}
-          initial={{ x: "100%", opacity: 0 }} // Start off-screen to the left with zero opacity
-          whileInView={{ x: 0, opacity: 1 }} // Slide to its normal position and fade in
-          transition={{ duration: 1,delay:0.3 }} // Animation duration
-          viewport={{ once: true }} // Ensure the animation happens only once when the element comes into view
-        >
-          <div className="flex text-xl pl-3 pb-5 text-white">Why Choose Us</div>
 
+        {/* Why Choose Us Section */}
+        <motion.div
+          className="flex flex-col w-full bg-green-900 rounded-md p-4 py-6"
+          style={{
+            backgroundImage: `url(${AboutDetailsCardBG})`,
+            backgroundPosition: "bottom right",
+            backgroundSize: "40%",
+            backgroundRepeat: "no-repeat",
+          }}
+          initial={{ x: "100%", opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1, delay: 0.3 }}
+          viewport={{ once: true }}
+        >
+          {/* Card Title */}
+          <div className="text-lg font-semibold text-white mb-4 pl-2">Why Choose Us</div>
+
+          {/* Details Cards */}
           <AboutDetailsCard
             title="Over 100 Satisfied Clients"
-            description="Our track record speaks for itself - with years of experience under our belt, we have had 
-            the pleasure of serving over 100 clients and counting."
+            description="Our track record speaks for itself - with years of experience under our belt, we have had the pleasure of serving over 100 clients and counting."
           />
-
           <AboutDetailsCard
-            title="Certified and trusted"
-            description="As a certified and trusted architecture agency, we provide exceptional services and 
-            have a reputation for delivering high-quality results"
+            title="Certified and Trusted"
+            description="As a certified and trusted architecture agency, we provide exceptional services and have a reputation for delivering high-quality results."
           />
         </motion.div>
       </div>
