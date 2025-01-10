@@ -13,17 +13,14 @@ import ContactPage from "./pages/ContactPage";
 import './index.css'
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path='/' element={<MainLayout/>}> 
+    <Route path='/sculpt-dev/' element={<MainLayout/>}> 
       <Route index element={<HomePage />} />
-      <Route path='/projects' element={<ProjectsPage />} />
-      <Route path='/contact' element={<ContactPage />} />
+      <Route path='/sculpt-dev/projects' element={<ProjectsPage />} />
+      <Route path='/sculpt-dev/contact' element={<ContactPage />} />
     </Route>
-  ),
-  {
-    basename: '/sculpt-dev',
-  }
-);
 
+)
+);
 
 const App = () => {
   return <RouterProvider router={router} />;
