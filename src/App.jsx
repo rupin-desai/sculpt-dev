@@ -4,6 +4,7 @@ import MainLayout from "./layouts/MainLayout";
 import HomePage from "./pages/HomePage";
 import ProjectsPage from "./pages/ProjectsPage";
 import ContactPage from "./pages/ContactPage";
+import AboutPage from "./pages/AboutPage";
 import './index.css';
 
 const App = () => {
@@ -14,6 +15,7 @@ const App = () => {
           <Route index element={<HomePage />} />
           <Route path="projects" element={<ProjectsPage />} />
           <Route path="contact" element={<ContactPage />} />
+          <Route path="about" element={<AboutPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

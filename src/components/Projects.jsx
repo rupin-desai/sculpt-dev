@@ -2,24 +2,30 @@ import React from "react";
 import ProjectsHeader from "./ProjectsHeader";
 import ProjectsImages from "./ProjectsImages";
 
-const headerText = <span>Recent Projects</span>;
-const images = [
-  "/sculpt-dev/projects-1.png",
-  "/sculpt-dev/projects-9.png",
-  "/sculpt-dev/projects-2.png",
-  "/sculpt-dev/projects-3.png",
-  "/sculpt-dev/projects-8.png",
-  "/sculpt-dev/projects-4.png",
-  "/sculpt-dev/projects-7.png",
-  "/sculpt-dev/projects-5.png",
-  "/sculpt-dev/projects-6.png",
-];
-
-const Projects = () => {
+const Projects = ({
+  headerText,
+  images,
+  smColumns,
+  mdColumns,
+  lgColumns,
+  xlColumns,
+  maxHeight, // Pass maxHeight for the image container
+  overflow, // Pass overflow property
+  imageMaxHeight, // Pass maxHeight for the images
+}) => {
   return (
     <>
       <ProjectsHeader headerText={headerText} />
-      <ProjectsImages images={images} />
+      <ProjectsImages
+        images={images}
+        smColumns={smColumns}
+        mdColumns={mdColumns}
+        lgColumns={lgColumns}
+        xlColumns={xlColumns}
+        maxHeight={maxHeight} // Passing dynamic maxHeight
+        overflow={overflow} // Passing dynamic overflow
+        imageMaxHeight={imageMaxHeight} // Passing dynamic maxHeight for images
+      />
     </>
   );
 };
