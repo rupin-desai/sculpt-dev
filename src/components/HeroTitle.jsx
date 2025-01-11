@@ -11,7 +11,7 @@ const HeroTitle = ({ title, subtitle }) => {
     <div className="w-full text-left pt-0 sm:px-6 md:px-8 lg:px-16">
       {/* Main Title with Fade-in Effect */}
       <motion.h1
-        className="flex lg:leading-snug lg:tracking-tighter items-start w-full pt-10 text-3xl font-medium text-black sm:text-4xl md:text-5xl lg:text-6xl xl:pt-32"
+        className="flex lg:leading-snug lg:tracking-tighter items-start w-full  text-3xl font-medium text-black sm:text-4xl md:text-5xl lg:text-6xl xl:pt-"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1 }}
