@@ -11,8 +11,8 @@ const AboutDetails = ({ AboutText }) => {
       {/* Left Image Section */}
       <motion.div
         className="flex w-full lg:w-1/2 justify-center lg:justify-end text-center px-6 lg:pr-20 mb-8 lg:mb-0"
-        initial={{ y: "50%" }}
-        whileInView={{ y: 0 }}
+        initial={{ transform: "translateY(50%)" }} // Using translateY
+        whileInView={{ transform: "translateY(0)" }}
         transition={{ duration: 1 }}
         viewport={{
           amount: 0.25,
@@ -27,8 +27,8 @@ const AboutDetails = ({ AboutText }) => {
         {/* Title */}
         <motion.div
           className="text-2xl font-bold py-2"
-          initial={{ x: "100%", opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
+          initial={{ opacity: 0, transform: "translateX(100px)" }} // Changed x to translateX
+          whileInView={{ opacity: 1, transform: "translateX(0)" }} // Using translateX
           transition={{ duration: 1 }}
           viewport={{ once: true }}
         >
@@ -38,9 +38,9 @@ const AboutDetails = ({ AboutText }) => {
         {/* Description */}
         <motion.div
           className="text-sm text-gray-700 pb-5 leading-relaxed"
-          initial={{ x: "100%", opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 1, delay: 0.2 }}
+          initial={{ opacity: 0, transform: "translateX(100px)" }} // Changed x to translateX
+          whileInView={{ opacity: 1, transform: "translateX(0)" }} // Using translateX
+          transition={{ duration: 0.5, delay: 0.2 }}
           viewport={{ once: true }}
         >
           {AboutText}
@@ -55,9 +55,9 @@ const AboutDetails = ({ AboutText }) => {
             backgroundSize: "40%",
             backgroundRepeat: "no-repeat",
           }}
-          initial={{ x: "100%", opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 1, delay: 0.3 }}
+          initial={{ opacity: 0, transform: "translateX(100px)" }} // Changed x to translateX
+          whileInView={{ opacity: 1, transform: "translateX(0)" }} // Using translateX
+          transition={{ duration: 0.5, delay: 0.3 }}
           viewport={{ once: true }}
         >
           {/* Card Title */}

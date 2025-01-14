@@ -15,12 +15,12 @@ const AboutHeader = ({ headerText }) => {
       </div>
       <motion.div
         className="flex p-0 text-lg text-gray-custom mt-4 lg:mt-0 w-full"
-        initial={{ x: "100%", opacity: 0 }} // Start from the right with 0 opacity
-        whileInView={{ x: 0, opacity: 1 }} // Slide to the center and fade in
-        transition={{ duration: 1 }}
+        initial={{ opacity: 0, transform: "translateX(100px)" }} // Start from the right with 0 opacity and a translated position
+        whileInView={{ opacity: 1, transform: "translateX(0)" }} // Slide to the center and fade in
+        transition={{ duration: 0.5 }}
         viewport={{ once: true }} // Ensures the animation happens only once when the element comes into view
       >
-        <div className="text-center sm:text-left text-sm sm:text-2xl md:text-lg lg:text-xl  text-black">
+        <div className="text-center sm:text-left text-sm sm:text-2xl md:text-lg lg:text-xl text-black">
           {headerText}
         </div>
       </motion.div>
